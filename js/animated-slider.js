@@ -3,6 +3,7 @@ jQuery(document).ready(function(){
 		convert a cubic bezier value to a custom mina easing
 		http://stackoverflow.com/questions/25265197/how-to-convert-a-cubic-bezier-value-to-a-custom-mina-easing-snap-svg
 	*/
+
 	var duration = 750,
 		epsilon = (1000 / 60 / duration) / 4,
 		firstCustomMinaAnimation = bezier(.42,.03,.77,.63, epsilon),
@@ -71,6 +72,9 @@ jQuery(document).ready(function(){
 				nextSlide(slider, sliderControls, pathArray);
 			}
 		});
+		setInterval(function(){
+			nextSlide(slider, sliderControls, pathArray);
+		},10000);
 	}
 
 	function retrieveVisibleSlide(slider, sliderControls, pathArray) {
