@@ -531,6 +531,7 @@ span[id]{
         margin:2rem auto 0;
         .service-item{
             padding-right:2rem;
+            padding-bottom: 1rem;
             @include transition(all .35s ease-in-out);
             @media screen  and (max-width:991px){
                 margin-bottom:2rem;
