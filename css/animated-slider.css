@@ -131,10 +131,22 @@ Slider navigation
   text-indent: 100%;
   white-space: nowrap;
   color: transparent;
-  background: url(../img/cd-icon-arrows.svg) no-repeat 0 0;
+  background: url(../images/cd-icon-arrows.svg) no-repeat 0 0;
   -webkit-transition: -webkit-transform 0.2s;
   -moz-transition: -moz-transform 0.2s;
   transition: transform 0.2s;
+}
+@media screen and (max-width:767px){
+  .cd-slider-navigation li{
+    display:none !important;
+  }
+}
+.cd-slider-navigation li a:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
 }
 .no-touch .cd-slider-navigation li a:hover {
   -webkit-transform: scale(1.1);
@@ -158,7 +170,7 @@ Slider dots/controls
 -------------------------------- */
 .cd-slider-controls {
   position: absolute;
-  bottom: 20px;
+  bottom: 5%;
   left: 50%;
   right: auto;
   padding:0;  
@@ -171,6 +183,12 @@ Slider dots/controls
   text-align: center;
   width: 90%;
 }
+@media screen and (max-width:767px){
+  .cd-slider-controls{
+    bottom: 0;
+  }
+}
+
 .cd-slider-controls::after {
   clear: both;
   content: "";

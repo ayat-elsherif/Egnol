@@ -352,9 +352,12 @@ span[id]{
             width:100%;
             text-align: right; 
             @media screen and (min-width:200px){
+                margin-top: 0;  
+            }
+            @media screen and (min-width:768px){
                 margin-top: 1rem;  
             }  
-            @media screen and (min-width:768px){
+            @media screen and (min-width:992px){
                 margin-top: 3rem;  
             } 
             
@@ -369,8 +372,15 @@ span[id]{
             }
         }
         .navbar-brand{
+            @media screen and (max-width:575px) {
+                max-width: 150px;
+               }
             img{
                 width:80%;
+                @media screen and (max-width:767px) {
+                    width:60%;
+                }
+               
             }
         }
         ul{
@@ -424,7 +434,10 @@ span[id]{
         text-align: center;
         top:45%;
         @media screen and (max-width:767px) {
-            top:60%;
+           // top:50%;
+           width:100%;
+           left:0;
+           margin-left: 0;;
         }
         h1,h3{
             text-transform: uppercase;
@@ -439,9 +452,21 @@ span[id]{
                 font-size: 4.5rem;
                 line-height: 4rem;
             }
+            @media screen and (max-width:1200px) {
+                font-size: 4rem;
+                line-height: 3rem;
+            }
             @media screen and (max-width:991px) {
                 font-size: 3rem;
                 line-height: 2.5rem;
+            }
+            @media screen and (max-width:767px) {
+                font-size: 2rem;
+                line-height: 2rem;
+            }
+            @media screen and (max-width:575px) {
+                font-size: 8vw;
+                line-height: 2rem;
             }
         }
         h3{
@@ -451,7 +476,18 @@ span[id]{
                 font-size: 2rem;
             }
             @media screen and (max-width:1200px) {
-                font-size: 1.5rem;
+                font-size: 1.25rem;
+            }
+            @media screen and (max-width:991px) {
+                font-size: 1rem;
+            }
+            @media screen and (max-width:767px) {
+                font-size: .8rem;
+                
+            }
+            @media screen and (max-width:575px) {
+                font-size: 4vw;
+                
             }
         }
 
@@ -476,6 +512,16 @@ span[id]{
             padding-left:15px;
             padding-right: 15px;
             text-transform: uppercase;
+            @media screen and (max-width:1440px) {
+                font-size: 1.2rem;
+                padding:3px 10px;
+                margin-top: 10px;
+            }
+            @media screen and (max-width:767px) {
+                font-size: 1rem;
+                padding:0 10px;
+                margin-top: 5px;
+            }
         }
     }
 }
