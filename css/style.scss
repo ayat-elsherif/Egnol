@@ -7,8 +7,8 @@ $mainColorHover:#0082cb;
 $bgWhite:rgba(255,255,255,.95);
 $border:2px dotted #ff8b93;
 $secColorLight: lighten($secondaryColor, 20%);
-
 $marron:#ac4f59;
+
 @mixin transition($args...) {
     -webkit-transition: $args;
     -moz-transition: $args;
@@ -63,8 +63,7 @@ body{
         padding-left:0px;
         list-style-type: none;
         margin-bottom:0;
-      
-    }
+        }
     }
     
 h2{
@@ -142,79 +141,8 @@ button.btn{
         border-bottom: 2px dotted $marron+cc;
     }
 }
- 
-.required{
-    position: relative;
-    &::before{
-        position: absolute;
-        content: "*";
-        color: #d3060d;
-        top: .5rem;
-        left: 1.5rem;
-        width: 10px;
-        height: 10px;
-        font-size: 1.3rem;
-    }
-}
-.bgBlue{
- 
-    background-color: #3d527d;
-    color:#eee;
-    h2{
-        color:#fff;
-    }
-}
 
-.bgTrans{
-    .navbar{
-        height:65px !important;
-        .navbar-brand{
-            margin-right:0 !important;
-            img{
-                width:11rem !important;
-            }
-        }
-        li.nav-item {
-            a{
-                padding: 0px 20px !important;
-            }
-        }
-    }
-}
-.bgTrans.sticky{
-    .navbar {
-        li.nav-item {
-            a{
-                padding-top: 0px !important; 
-            }
-        }
-    }
-}
 
-.owl-nav{
-    text-align: center;
-    font-size: 3.1rem;
-    button{
-        color:#eee !important;
-        margin:auto 10px;
-        background-color: transparent !important;
-        &:focus{
-            outline: transparent;
-        }
-        span{
-            background-color: $mainColor !important;
-            display: inline-block;
-            width: 2.2rem;
-            height: 2.2rem;
-            line-height: 1.5rem;
-            border-radius: 5px;
-            @include transition(all .35s cubic-bezier(0.56, 0.09, 0.63, 0.98));
-            &:hover{
-                background-color:lighten($mainColor, 10%) !important;
-            }
-        }
-    }
-}
 .bgHover{
     position: relative;
     &:after
@@ -284,7 +212,7 @@ button.btn{
 
 .scroll-up {
     position: fixed;
-    bottom: 25px;
+    bottom: 50px;
     right: 25px;
     color: #eee;
     height: 40px;
@@ -335,6 +263,79 @@ span[id='home']{
         padding-bottom: 3rem;
         border-top:$border;
         border-bottom:$border;
+    }
+}
+
+
+/*******************************enquire Modal navbar*************************************/
+#quoteModal{
+    
+    .modal-dialog{
+        max-width:40%;
+        font-size: 1em;
+        @media screen and (max-width:1199px) {
+            max-width:60%;
+            font-size: .9em;
+        }
+        @media screen and (max-width:767px) {
+            max-width:80%;
+            font-size: .8em;
+        }
+        @media screen and (max-width:575px) {
+            max-width:100%;
+        }
+        .modal-header{
+            border-bottom:none;
+            
+            .close{
+                background-color: $marron;
+                color: #fff;
+                font-size:3.5em;
+                width: 1.3em;
+                height:1.3em;
+                line-height:.6em;
+                opacity: 1;
+                outline:none !important;
+            }
+        }
+        .modal-body{
+            padding:1em 3em;
+            h2{
+                font-size: 2.25em;
+                font-family: "poppins-bold";
+                color:$marron !important;
+                text-transform: uppercase;
+                margin-bottom: 2rem;
+                margin-top: .5rem;
+            }
+           form{
+             select, input{
+                height: 46px;
+                 border: 1px solid #b0b0b0;
+                 font-weight: 700;
+                 font-size: 1.2em;
+
+             }
+                input::placeholder{
+                    color:#757575;
+     
+                }
+  
+            .form-group{
+                margin-top:2rem;
+                margin-bottom:2rem;
+                font-size: 1em;
+                button{
+                    padding:.5rem 2rem;
+                    font-size:18px;
+                    font-weight: bold;
+                    background-color: $marron;
+                    margin-top:.5rem;
+                    font-size: 1.1em;
+                }
+            }
+           }
+        }
     }
 }
 /**********************Header***********************/
@@ -520,12 +521,17 @@ span[id='home']{
                display: none;
             }
         }
-        button{
+        a{
             font-size: 1.7rem;
             margin-top: 30px;
             border-radius: 30px;
             padding-left:15px;
+            color:#fff;
             padding-right: 15px;
+            background-color:$secondaryColor;
+            &:hover{
+                background-color:$secondaryColor+aa;
+            }
             text-transform: uppercase;
             @media screen and (max-width:1440px) {
                 font-size: 1.2rem;
@@ -645,15 +651,14 @@ span[id='home']{
         .price{
             margin-top: 3rem;
             margin-bottom: 1rem;
-             small{
+             strong,span,small{
                 display: block;
+                text-align: center;
             }
             span{
                 font-weight: bolder;
-                text-align: right;
                 font-family: "poppins-bold";
                 text-transform: uppercase;
-                margin-right:-5px;
                 letter-spacing: 1px;
             }
             strong{
@@ -663,6 +668,7 @@ span[id='home']{
                 
             }
             small{
+                margin-top: 1rem;
                 letter-spacing: 1px;
                 font-size: 1rem;
             }

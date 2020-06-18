@@ -3,7 +3,7 @@
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#ff8b93">
+    <meta name="theme-color" content="#ac4f59">
     <meta name="description" content="A description of the page">
     <meta name="robots" content="index,follow,max-snippet:100">
     <meta name="googlebot" content="index,follow,max-snippet:100">
@@ -20,14 +20,52 @@
     </style>
     </head>
     <body data-spy="scroll" data-target=".navbar" data-offset="50" style="position: relative;">
+      <!----------------------request for a quote navbar------------------------>
+      <div class="modal fade" id="quoteModal" tabindex="-1" role="dialog" aria-labelledby="quoteModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h2 class=" text-center">Request A Quote</h2>
+              <form>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="enquireName" aria-describedby="enquireName" placeholder="Your Name..">
+                </div>
+                <div class="form-group">
+                  <input type="phone" class="form-control" id="enquirePhone" aria-describedby="enquirePhone" placeholder="Your Phone Number..">
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" id="enquireEmail" aria-describedby="enquireEmail" placeholder="Your email..">
+                </div>
+                <div class="form-group">
+                  <select  class="form-control" id="enquireEmail" aria-describedby="enquireEmail">
+                      <option>I want to inquire about..</option>
+                      <option>I want to inquire about..</option>
+                  </select>
+                </div>
+                <div class="form-group text-center">
+                  <button type="button" class="btn btn-primary ">SEND INQUIRY</button>                             
+
+                </div>
+              </form>
+            </div>
+           
+          </div>
+        </div>
+      </div>
       <!------------------------------header--------------------------------->
+      
 
     <div class="scroll-up"><i class="fa fa-chevron-up"></i></div>
       <div class="navCont">
         <b class="screen-overlay"></b>
         <div class="container">
           <div class='requestQuote px-3'>
-            <button class="btn">request a quote</button>
+            <button class="btn" type="button" data-toggle="modal" data-target="#quoteModal">request a quote</button>
           </div>
           <div class="row mx-0 d-block d-xl-none d-lg-none mt-3 align-items-center d-flex">
             <a class="navbar-brand col-md-4 col-6" href="#"><img src='images/egnol-logo.png' width="100%"></a>
@@ -59,7 +97,7 @@
                     <a class="nav-link" href="#clients">clients</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#contacts">contact us</a>
+                    <a class="nav-link" href="#contact">contact us</a>
                   </li>               
               </ul>
             </div>
@@ -89,7 +127,7 @@
                     <h1 class="animated fadeInUp" style='animation-delay: .5s;'>we deliver results</h1>
                     <h3 class="animated fadeInLeft" style='animation-delay: 1s;'>WITH GOOD TASTE AND GREAT TECHNOLOGY <br>
                       WE CRAFT AWARD WINNING WEBSITES</h3>
-                      <button class="btn animated fadeInDown" style='animation-delay: 1.5s;'>Contact us</button>
+                      <a class="btn animated fadeInDown" href="#contact" style='animation-delay: 1.5s;'>Contact us</a>
                   </div>
                 </div> <!-- .cd-svg-wrapper -->
               </li>
@@ -110,8 +148,7 @@
                     <h1 class="animated fadeInUp" style='animation-delay: .5s;'>we deliver results</h1>
                     <h3 class="animated fadeInLeft" style='animation-delay: 1s;'>WITH GOOD TASTE AND GREAT TECHNOLOGY <br>
                       WE CRAFT AWARD WINNING WEBSITES</h3>
-                      <button class="btn animated fadeInDown" style='animation-delay: 1.5s;'>Contact us</button>
-                  </div>
+                      <a class="btn animated fadeInDown" href="#contact" style='animation-delay: 1.5s;'>Contact us</a>                  </div>
                 </div> <!-- .cd-svg-wrapper -->
               </li>
         
@@ -131,8 +168,7 @@
                     <h1 class="animated fadeInUp" style='animation-delay: .5s;'>we deliver </h1>
                     <h3 class="animated fadeInLeft" style='animation-delay: 1s;'>WITH GOOD TASTE AND GREAT TECHNOLOGY <br>
                       WE CRAFT AWARD WINNING WEBSITES</h3>
-                      <button class="btn animated fadeInDown" style='animation-delay: 1.5s;'>Contact us</button>
-                  </div>
+                      <a class="btn animated fadeInDown" href="#contact" style='animation-delay: 1.5s;'>Contact us</a>                  </div>
                 </div> <!-- .cd-svg-wrapper -->
               </li>
                   
@@ -260,7 +296,7 @@
               <P><q> buy now, pay later </q></P>
               <p class="halfBorder">Egnol payment plan breaks up your bill into smaller
                 chunks that you pay over a set amount of time.</p>
-                <button class="btn">request a quote</button>
+                <button class="btn" type="button" data-toggle="modal" data-target="#quoteModal">request a quote</button>
               </div>
               <div class="col-lg-6 col-12 px-4">
                 <div class="row">
@@ -268,8 +304,9 @@
                       <div class="price-item ">
                         <h5>starter</h5>
                       <div class="price">
-                        <strong>300</strong>
+                      
                         <span>aed</span>
+                        <strong>300</strong>
                         <small>Monthly</small>
                       </div>
                       </div>
@@ -278,8 +315,8 @@
                       <div class="price-item">
                         <h5>professional</h5>
                       <div class="price">   
-                        <strong>500</strong>
                         <span>aed</span>
+                        <strong>500</strong>
                         <small>Monthly</small>
                       </div>
                       </div>
@@ -288,8 +325,8 @@
                       <div class="price-item">
                         <h5>enterprise</h5>
                       <div class="price">
-                        <strong>690</strong>
                         <span>aed</span>
+                        <strong>690</strong> 
                         <small>Monthly</small>
                       </div>
                       </div>
@@ -329,6 +366,7 @@
 
     <!------------------------------Footer------------------------------------>  
     <section class="footerCont bg-white">
+      <span id='contact'></span>
     <div class="container-fluid">
       <div class="container">
         <div class="row align-items-end">
