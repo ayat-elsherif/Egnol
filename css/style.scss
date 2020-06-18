@@ -191,11 +191,6 @@ button.btn{
     }
 }
 
-.navbar-brand{
-    margin-right:0 !important;
-    max-width: 250px;
-    width: 100%;
-}
 .owl-nav{
     text-align: center;
     font-size: 3.1rem;
@@ -241,13 +236,17 @@ button.btn{
 
 .sticky{
     position: sticky !important;
-    margin-top:-5rem !important;
+    margin-top:-16vh !important;
     background-color: rgba(255,255,255,.9) !important;
     box-shadow: 0px 1px 5px 0px #66666666 !important;
     padding:0 !important;
     top:0 !important;
     .requestQuote{
         display: none;
+    }
+    .navbar_main{
+        color:$marron !important;
+        transition: none;
     }
     .navbar-brand{
         img{
@@ -312,7 +311,10 @@ span[id]{
     display: block;
     visibility: hidden;
 }
-
+span[id='home']{
+    margin-top:0px;
+    height: 0;
+}
 .container{
     @media screen and (min-width:576px) {
         max-width:100%;
@@ -338,16 +340,10 @@ span[id]{
 /**********************Header***********************/
 
     .navCont{
-
         position:absolute;
         top:1rem;
         width:100%;
         z-index: 100;
-        // @media screen and (min-width:992px) {
-        //     background-color: transparent;
-        // box-shadow: none;
-        // border:none;
-        // }
         .requestQuote{
             width:100%;
             text-align: right; 
@@ -371,16 +367,35 @@ span[id]{
                 }
             }
         }
-        .navbar-brand{
+        .navbar_main{
+            background-color: transparent;
+            border:none;
+            font-size: 2rem;
+            outline: none !important;
+            color:#fff;
             @media screen and (max-width:575px) {
-                max-width: 150px;
+                font-size:1.5rem;
+            }
+        }
+        .navbar-brand{
+            margin-right:0 !important;
+            max-width: 250px;
+            width: 100%;  
+            @media screen and (max-width:767px) {
+                max-width: unset;
                }
+            @media screen and (max-width:575px) {
+             //   max-width: 150px;
+               }
+
             img{
                 width:80%;
                 @media screen and (max-width:767px) {
                     width:60%;
                 }
-               
+                @media screen and (max-width:575px) {
+                    width: 30vw;
+                }
             }
         }
         ul{
@@ -753,3 +768,80 @@ span[id]{
 
     }
 }
+
+/**********************offcanvas********************/
+body.offcanvas-active{
+    overflow: hidden;
+}
+.offcanvas-header{ 
+    display:none; 
+    @media all and (max-width:992px) { 
+         display:block; 
+         .btn-close{
+             border:none;
+             background-color: transparent;
+         }
+       }
+    }
+.screen-overlay {
+  height: 100%;
+  z-index: 30;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity:0;
+  visibility:hidden;
+  background-color: rgba(34, 34, 34, 0.6);
+  transition:opacity .2s linear, visibility .1s, width 1s ease-in;
+}
+.screen-overlay.showCanvas {
+  transition:opacity .5s ease, width 0s;
+  opacity:1;
+  width:100%;
+  visibility:visible;
+}
+
+
+.mobile-offcanvas{
+    @media screen and (max-width:992px) {
+        visibility: hidden;
+    transform:translateX(-100%);
+    border-radius:0; 
+    display:block;
+    position: fixed;
+    top: 0; left:0;
+    height: 100%;
+    z-index: 1200;
+    width:40%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: visibility .2s ease-in-out, transform .2s ease-in-out;
+    &.showCanvas{
+        visibility: visible;
+        transform: translateX(0);
+        overflow: hidden;
+        padding:0;
+        .navbar-collapse{
+            height: 100%;
+            .navbar-nav{
+                margin-top: 0 !important;
+                height: 100%;
+                .nav-item{
+                    a{
+                        padding-top:5px !important;
+                        padding-bottom: 5px !important;
+                    }
+                }
+            }
+        }
+        
+        nav-item{
+            animation: bounce; 
+      animation-duration: 2s; 
+        }
+      }
+    }
+    @media screen and (max-width:576px) {
+        width:80%;
+    }
+  }	

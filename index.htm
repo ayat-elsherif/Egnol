@@ -17,24 +17,35 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style-min.css">
 
+
     </style>
     </head>
     <body data-spy="scroll" data-target=".navbar" data-offset="50" style="position: relative;">
       <!------------------------------header--------------------------------->
+
     <div class="scroll-up"><i class="fa fa-chevron-up"></i></div>
       <div class="navCont">
+        <b class="screen-overlay"></b>
         <div class="container">
           <div class='requestQuote px-3'>
             <button class="btn">request a quote</button>
           </div>
-          <nav class="navbar navbar-expand-lg ">
-            <a class="navbar-brand" href="#"><img src='images/egnol-logo.png' width="100%"></a>
-            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-              aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars text-white"></i></button>
-            <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <div class="row mx-0 d-block d-xl-none d-lg-none mt-3 align-items-center d-flex">
+            <a class="navbar-brand col-md-4 col-6" href="#"><img src='images/egnol-logo.png' width="100%"></a>
+            <button data-trigger="#navbar_main" class=" navbar_main float-right col-md-2 offset-md-6 col-2 offset-4" type="button" >
+              <i class="fa fa-bars"></i></button>
+          </div>
+          <nav class="navbar navbar-expand-lg mobile-offcanvas " id='navbar_main'>
+            <a class="navbar-brand d-none d-lg-block" href="#"><img src='images/egnol-logo.png' width="100%"></a>
+          
+            <div class=" navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                  <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <div class="offcanvas-header"> 
+                  <button class="btn-close float-right fa fa-3x mx-2"> &times</button>
+                </div>
+                  <li class="nav-item">
+                      <a class="nav-link active" href="#home">Home <span class="sr-only">(current)</span></a>
+                    
                   </li>
                   <li class="nav-item">
                       <a class="nav-link" href="#about">about us</a>
@@ -58,7 +69,9 @@
       </div>
       
       <!-------------------------Slider-------------------------->
+      <span id='home'></span>
      <section class="container-fluid sliderCont">
+      
         <div class="row d-none d-sm-block">
           <div class="cd-slider-wrapper">
             <ul class="cd-slider" data-step1="M1402,800h-2c0,0,0-213,0-423s0-377,0-377h1c0.6,0,1,0.4,1,1V800z" data-step2="M1400,800H724c0,0-297-155-297-423C427,139,728,0,728,0h671c0.6,0,1,0.4,1,1V800z" data-step3="M1400,800H0c0,0,1-213,1-423S1,0,1,0h1398c0.6,0,1,0.4,1,1V800z" data-step4="M-2,800h2c0,0,0-213,0-423S0,0,0,0h-1c-0.6,0-1,0.4-1,1V800z" data-step5="M0,800h676c0,0,297-155,297-423C973,139,672,0,672,0L1,0C0.4,0,0,0.4,0,1L0,800z" data-step6="M0,800h1400c0,0-1-213-1-423s0-377,0-377L1,0C0.4,0,0,0.4,0,1L0,800z">

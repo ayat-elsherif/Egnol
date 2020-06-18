@@ -49,7 +49,6 @@ $(function(){
   });
 /**************offcanvas *************/
 
-
     $('#homeBlog').owlCarousel({
         loop:true,
         dots:false,
