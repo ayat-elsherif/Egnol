@@ -643,9 +643,9 @@ span[id='home']{
             
         }
         .price{
-           width:50%;
-           margin:auto;
-            span, strong, small{
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+             small{
                 display: block;
             }
             span{
@@ -657,14 +657,14 @@ span[id='home']{
                 letter-spacing: 1px;
             }
             strong{
-                font-size: 3.2rem;
+                font-size: 4rem;
                 margin:10px auto;
                 font-weight: 300;
                 
             }
             small{
                 letter-spacing: 1px;
-                font-size: 1.2rem;
+                font-size: 1rem;
             }
         }
     }
