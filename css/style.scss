@@ -21,28 +21,34 @@ $marron:#ac4f59;
   @font-face {
     font-family:Poppins-SemiBold;
     src: url(../webfonts/Poppins-SemiBold.ttf);
+    font-display: fallback;
   }
 
 @font-face {
     font-family: poppins-bold;
     src: url(../webfonts/Poppins-ExtraBold.ttf);
+    font-display: fallback;
   }
   @font-face {
     font-family: poppins-medium;
     src: url(../webfonts/Poppins-Medium.ttf);
+    font-display: fallback;
   }
   @font-face {
     font-family: Poppins-Light;
     src: url(../webfonts/Poppins-Light.ttf);
+    font-display: fallback;
   }
   @font-face {
     font-family: Poppins-thin;
     src: url(../webfonts/Poppins-Thin.ttf);
+    font-display: fallback;
   }
 
   @font-face{
       font-family: Poppins-ExtraLight;
       src: url(../webfonts/Poppins-ExtraLight.ttf);
+      font-display: fallback;
   }
 
 
@@ -226,7 +232,7 @@ button.btn{
     background-color: $marron+aa;
     border-radius: 2px;
     @include transition(all .35s cubic-bezier(0.56, 0.09, 0.63, 0.98));
-    box-shadow:0px 0px 1px 2px #fff;
+    box-shadow:0px 0px 1px 2px #faf3f4;
     &:hover{
         background-color: $marron;
     }
@@ -752,7 +758,7 @@ span[id='home']{
                     font-size: 1rem;
                     margin-bottom: 0;
                     font-family: "poppins-light";
-                    line-height: 1.4rem;
+                    line-height: 1.7rem;
                 }
             }
         }   
