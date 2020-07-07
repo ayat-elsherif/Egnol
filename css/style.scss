@@ -333,6 +333,9 @@ span[id='home']{
                 line-height:.6em;
                 opacity: 1;
                 outline:none !important;
+                &:hover{
+                    background-color: $marron+ee;
+                }
             }
         }
         .modal-body{
