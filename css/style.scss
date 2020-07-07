@@ -321,25 +321,25 @@ span[id='home']{
                  font-weight: 700;
                  font-size: 1.2em;
 
-             }
+                }
                 input::placeholder{
                     color:#757575;
      
                 }
   
-            .form-group{
-                margin-top:2rem;
-                margin-bottom:2rem;
-                font-size: 1em;
-                button{
-                    padding:.5rem 2rem;
-                    font-size:18px;
-                    font-weight: bold;
-                    background-color: $marron;
-                    margin-top:.5rem;
-                    font-size: 1.1em;
+                .form-group{
+                    margin-top:2rem;
+                    margin-bottom:2rem;
+                    font-size: 1em;
+                    button{
+                        padding:.5rem 2rem;
+                        font-size:18px;
+                        font-weight: bold;
+                        background-color: $marron;
+                        margin-top:.5rem;
+                        font-size: 1.1em;
+                    }
                 }
-            }
            }
         }
     }
@@ -466,24 +466,24 @@ span[id='home']{
             margin-bottom:10px;
         } 
         h1{
-            font-size: 6rem;
+            font-size: 5rem;
             font-family: "poppins-bold",Impact, 'Arial Narrow Bold', sans-serif;
             font-weight: bold;
             line-height: 5rem;
             @media screen and (max-width:1440px) {
-                font-size: 4.5rem;
+                font-size: 4rem;
                 line-height: 4rem;
             }
             @media screen and (max-width:1200px) {
-                font-size: 4rem;
+                font-size: 3.5rem;
                 line-height: 3rem;
             }
             @media screen and (max-width:991px) {
-                font-size: 3rem;
+                font-size: 2.5rem;
                 line-height: 2.5rem;
             }
             @media screen and (max-width:767px) {
-                font-size: 2rem;
+                font-size: 1.5rem;
                 line-height: 2rem;
             }
             @media screen and (max-width:575px) {
@@ -492,10 +492,10 @@ span[id='home']{
             }
         }
         h3{
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-family: "poppins-light",Arial, Helvetica, sans-serif;
             @media screen and (max-width:1440px) {
-                font-size: 2rem;
+                font-size: 1.7rem;
             }
             @media screen and (max-width:1200px) {
                 font-size: 1.25rem;
